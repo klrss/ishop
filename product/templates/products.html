@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container-fluid">
+	
+	<ul>
+	{% for obj in products %}
+		
+
+		<li><{{obj}}
+		</li>
+		<p></p>
+		
+
+	{% endfor %}
+</ul>
+<p><a href="{% url 'list' %}">Back to the list</a></p>
+</div>
+{% endblock %}

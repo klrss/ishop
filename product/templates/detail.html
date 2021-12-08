@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container-fluid">
+	<ul>
+	
+	<li><small>{{obj_detail.category}}</small>
+		<p>{{obj_detail.title}}</p></li>
+		<p>{{obj_detail.description}}</p>
+
+
+</ul>
+<p><a href="{% url 'list' %}">Back to the list</a></p>
+</div>
+{% endblock %}

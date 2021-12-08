@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container-fluid">
+	
+	{% for obj in object_list %}
+	<div><small>{{obj.category}}</small>
+		<p><a href="{% url 'detail' obj.slug %}">{{obj.title}}</a>
+		<span>{{obj.price}}</span></p></div>
+
+
+{% endfor %}
+
+</div>
+{% endblock %}
