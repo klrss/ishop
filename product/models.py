@@ -16,7 +16,7 @@ class Product(models.Model):
 	slug = models.SlugField(unique=True)
 	description = models.TextField(null=True)
 	price = models.DecimalField(decimal_places=2, max_digits=19)
-	#image = models.FileField(upload_to='product/')
+	image = models.ImageField(upload_to='product/', null=True, blank=True)
 
 	def __str__(self):
 		return self.title

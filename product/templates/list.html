@@ -4,8 +4,9 @@
 <div class="container-fluid">
 	
 	{% for obj in object_list %}
-	<div><small>{{obj.category}}</small>
-		<p><a href="{% url 'detail' obj.slug %}">{{obj.title}}</a>
+	<div><small>{{obj.category}}</small></div>
+		<!--<div><img src="{{obj.image.url}}" class="img-fluid" /></div>-->
+		<div><p><a href="{% url 'detail' obj.slug %}">{{obj.title}}</a>
 		<span>{{obj.price}}</span></p></div>
 
 

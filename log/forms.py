@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 
 # form to login users using class
 
+class LoginForm(forms.Form):
+	username = forms.CharField(max_length=63)
+	password = forms.CharField(max_length=63,widget=forms.PasswordInput)
+
 # form to registrate users using classn	
 class NewUserForm(UserCreationForm):
 	firstname = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))

@@ -42,8 +42,16 @@
         </li>
       </ul>
     </div>
-    <span class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'login' %}">Sign in</a></span>
-    <span class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'register' %}">Sign up</a></span>
+   {% if user.is_authenticated %}
+   <span>Hello, {{user.username}}</span>
+   <span class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">Sign out</a></span>
+    {% else %}
+        <span class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Sign in</a></span>
+    <span class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{% url 'register' %}">Sign up</a></span>
+    {% endif %}
   </div>
 </nav>
 <!-- the end of navbar -->
